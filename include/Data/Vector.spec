@@ -19,6 +19,8 @@ length    :: forall a. x:(Data.Vector.Vector a) -> {v : Nat | v = vlen x }
 
 replicate :: n:Nat -> a -> {v:Data.Vector.Vector a | vlen v = n}
 
+generate :: n:Nat -> (n:Nat -> a) -> {v:Data.Vector.Vector a | vlen v = n}
+
 imap :: (Nat -> a -> b) -> x:(Data.Vector.Vector a) -> {y:Data.Vector.Vector b | vlen y = vlen x }
 
 map :: (a -> b) -> x:(Data.Vector.Vector a) -> {y:Data.Vector.Vector b | vlen y = vlen x }
